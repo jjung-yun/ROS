@@ -1,9 +1,0 @@
-# Class
-######################
-dxl_protocol2	KEYWORD1
-# Methods and Functions
-init_port	KEYWORD2
-op_mode	KEYWORD2
-torque_en	KEYWORD2
-sync_pos_move3	KEYWORD2
-
