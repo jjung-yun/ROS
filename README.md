@@ -2,7 +2,7 @@
 >
 >## Field painting robot based on ROS and map recognition
 >
->                                                                                    ####2018100670 김정윤
+2018100670 김정윤
 >                                                                                    ####2018100694 방지호
 
 
