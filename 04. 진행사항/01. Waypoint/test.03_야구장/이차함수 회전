@@ -1,0 +1,35 @@
+from math import pi, sqrt, atan2, sin, cos, acos, radians
+
+def F(x):
+    y=(sin(theta))/(x_val*(cos(theta)**2))*x**2
+    
+    outx=cos(radians(135))*x-sin(radians(135))*y
+    outy=sin(radians(135))*x+cos(radians(135))*y
+    outx+=5*sqrt(2)
+    outy+=5*sqrt(2)
+    
+    return [outx, outy]
+
+x_val = sqrt((5*sqrt(2))**2+(8.125-5*sqrt(2))**2)
+theta=acos(8.125*sqrt(2)/(2*x_val))
+
+h1 = 2*x_val/20
+
+a,b = F((h1*0-x_val)*cos(theta))
+
+print(a,b)
+
+WAYPOINTS = [[0.1,0],[0.1,0.1],[1.05,1.05],[1.2,1.05],[1.2,1.2],[1.05,1.2],[1.05,1.05],[0.1,0.1],[0,0.1],[0,0],
+             [2.25,0],[2.25,0.1],[2.15,0.1],[2.15,0],[2.25,0],
+             [2.25,2.25],[2.15,2.25],[2.15,2.15],[2.25,2.15],[2.25,2.25],
+             [0,2.25],[0,2.15],[0.1,2.15],[0.1,2.25],[0,2.25],[0,0],
+             F((h1*0-x_val)*cos(theta)),F((h1*1-x_val)*cos(theta)),F((h1*2-x_val)*cos(theta)),
+             F((h1*3-x_val)*cos(theta)),F((h1*4-x_val)*cos(theta)),F((h1*5-x_val)*cos(theta)),
+             F((h1*6-x_val)*cos(theta)),F((h1*7-x_val)*cos(theta)),F((h1*8-x_val)*cos(theta)),
+             F((h1*9-x_val)*cos(theta)),F((h1*10-x_val)*cos(theta)),F((h1*11-x_val)*cos(theta)),
+             F((h1*12-x_val)*cos(theta)),F((h1*13-x_val)*cos(theta)),F((h1*14-x_val)*cos(theta)),
+             F((h1*15-x_val)*cos(theta)),F((h1*16-x_val)*cos(theta)),F((h1*17-x_val)*cos(theta)),
+             F((h1*18-x_val)*cos(theta)),F((h1*19-x_val)*cos(theta)),F((h1*20-x_val)*cos(theta)),
+             [0,0]]
+
+print(WAYPOINTS)
