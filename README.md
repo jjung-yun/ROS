@@ -103,4 +103,6 @@ Fig. 10 The actual Turtlebot drawing a square field
 
 정사각형 트랙을 따라 움직이며 경로를 생성할 때, 레이저에서 스캔된 값들이 앞서 언급된 조건과 같은 경우 터틀봇이 정지하는 것을 확인한 영상이다.
 
+https://user-images.githubusercontent.com/104184349/204852106-72a37eaf-3db5-4cf2-acb0-fec11baeecd0.mp4
+
 Fig. 11 Turtlebot moving and stopping along the path
