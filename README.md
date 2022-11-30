@@ -96,6 +96,11 @@ gazebo 시뮬레이션 환경에서 터틀봇이 학습하며 맵을 나아가 �
 Fig. 9 trajectory graph obtained from DQN learning
 
 (3) 실제 터틀봇 구현
+waypoint를 따라 움직일 수 있음을 간단히 보여주기 위해 정사각형 트랙을 움직이며 그 trajectory를 그래프로도 보여줌을 확인하는 영상이다.
 
+https://user-images.githubusercontent.com/104184349/204847998-daacea51-76d0-4070-9bc8-a333add9785d.mp4
+Fig. 10 The actual Turtlebot drawing a square field
 
-Fig. 10 The actual Turtlebot drawing a field
+정사각형 트랙을 따라 움직이며 경로를 생성할 때, 레이저에서 스캔된 값들이 앞서 언급된 조건과 같은 경우 터틀봇이 정지하는 것을 확인한 영상이다.
+
+Fig. 11 Turtlebot moving and stopping along the path
