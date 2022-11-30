@@ -66,4 +66,36 @@ Fig. 3 Maps used for dqn learning
  Fig. 4 Connecting the actual Turtlebot 3 and the auxiliary battery
 
 
+# 6. 결과
+(1) PID제어를 통한 Field painting
+ROS-melodic에서 gazebo로 구현하여 뽑은 trajectory는 아래와 같다.
 
+![축구장 (1)](https://user-images.githubusercontent.com/104184349/204845108-ff631cb5-cd3a-494c-97d5-e1c666c05c74.png)
+
+Fig. 5 A soccer field implemented by the trajectory of turtlebot3
+
+![오징어 (1)](https://user-images.githubusercontent.com/104184349/204847346-6220dc9e-6671-4645-ba6f-718b92abc160.png)
+
+Fig. 6 A baseballfield implemented by the trajectory of turtlebot3
+
+![야구장 (1)](https://user-images.githubusercontent.com/104184349/204847483-2914155e-a39c-4b10-9a4f-f8ef44fa06cb.png)
+
+Fig. 7 A squid game field implemented by the trajectory of turtlebot3
+
+(2) DQN학습을 통한 Field painting 
+
+![화면 캡처 2022-11-30 213337](https://user-images.githubusercontent.com/104184349/204847565-1efba6ff-1955-4788-957d-a50b27b59976.png)
+
+Fig. 8 goal reward 3000 collision reward –1500 
+gazebo 시뮬레이션 환경에서 터틀봇이 학습하며 맵을 나아가 경로를 그리는 모습이다. reward는 가장 크게는 도착 보상과 충돌 보상을 가지며, yaw축이 회전한 정도, goal box와 가까워지는 정도 생존한 시간 등을 종합적으로 고려해 총 보상값을 적용했으며 상단 그래프가 reward에 대한 값을 나타낸다.
+또한 아래의 그래프는 DQN모델의 비용함수 값의 파라미터 중 하나이며, state와 action의 조합값인 Q-value이다.
+학습으로 얻어진 경로는 아래와 같다.
+
+![fig9](https://user-images.githubusercontent.com/104184349/204847629-f9666fb8-4388-420e-9c84-88632f8b03f0.png)
+
+Fig. 9 trajectory graph obtained from DQN learning
+
+(3) 실제 터틀봇 구현
+
+
+Fig. 10 The actual Turtlebot drawing a field
