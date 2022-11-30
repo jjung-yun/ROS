@@ -54,7 +54,7 @@ Collision 시 –1500, 목표 도달 시 3000,
 좌우가 2m by 2m인 정사각형이고 총 4.5m by 2.5m인 직사각형 코트의 경로를 그리며 학습하기 위해서 아래와 같이 벽을 설계하였다.
  -학습할 map
 
-![화면 캡처 2022-11-30 210744](https://user-images.githubusercontent.com/104184349/204840981-1982de27-25b4-4897-a921-e0047ce15d85.png)
+![가제보맵](https://user-images.githubusercontent.com/104184349/204853755-cdadca60-55d8-4ddf-923c-1e90347ba971.png)
 
 Fig. 3 Maps used for dqn learning
 
