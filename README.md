@@ -61,7 +61,7 @@ Fig. 3 Maps used for dqn learning
 터틀봇의 SBC인 라즈베리 파이 PC를 고정 IP할당과 Remote PC를 연결해야 한다. 그 과정으로는 PC setup과 SBC setup을 마친 후 두 PC ubuntu에 ROS 의존성 패키지를 설치한 이후 remote PC에 필요한 ros 패키지들을 모두 설치하여야 한다. 이후 remote PC의 Ubuntu와 터틀봇의 라즈베리파이를 원격 연결할 수 있다. 다음으로 remote PC에서 turtlebot3_bringup 패키지를 실행할 수 있는데 이 패키지에 의해서 실제 터틀봇의 odometry와 battery state, IMU 등등의 터틀봇의 data값들을 가져올 수 있다. 이후에는 gazebo상에서 시뮬레이션 하던 것과 같이 소스코드와 패키지를 실행할 수 있었다.
 실제 구현한 사진은 아래와 같고, simulation에서 움직이는 것과 같이 teleop 패키지를 이용해 키보드로 터틀봇을 간단히 조작할 수 있었다.
 
-![해상도작음](https://user-images.githubusercontent.com/104184349/204842508-3acc8ea5-d14e-4e44-bc55-356769ce3085.jpg)
+![더작음](https://user-images.githubusercontent.com/104184349/204842767-e07c0bb4-f934-471d-9bb3-4871a13502b8.jpg)
 
  Fig. 4 Connecting the actual Turtlebot 3 and the auxiliary battery
 
