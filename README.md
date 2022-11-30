@@ -31,6 +31,7 @@ Fig. 1 A generic closed-loop process-control system with PID controller.
 ![축구장설계](https://user-images.githubusercontent.com/104184349/204840821-ae1564a1-c480-4f5d-b124-ed839e349898.png)
 
 Fig. 2 Design for football field
+
 PID제어에서 축구장, 야구장, 오징어 게임장 총 3개 종류의 field 설계 중 축구장만을 대표 예시로 들겠다.
 
 추가적으로, field를 그리면서 생길 수 있는 돌발 상황으로 갑작스런 장애물이 생기면 감지된 라이더의 개수로 멈추는 소스코드를 제작하였다. 코드에 대한 설명은 다음과 같다. 왼쪽 15개 오른쪽 15개의 범위의 라이다를 센싱하여 3개씩 평균낸 값을 뽑아내면 10개 묶음의 라이다 값을 받아들인다. 그 중 40cm이내의 범위에 들어온 묶음이 4개 이상이 감지되는 동안 정지한다. 그 물체가 사라지면 다시 이동을 재개한다.
@@ -87,6 +88,7 @@ Fig. 7 A squid game field implemented by the trajectory of turtlebot3
 ![화면 캡처 2022-11-30 213337](https://user-images.githubusercontent.com/104184349/204847565-1efba6ff-1955-4788-957d-a50b27b59976.png)
 
 Fig. 8 goal reward 3000 collision reward –1500 
+
 gazebo 시뮬레이션 환경에서 터틀봇이 학습하며 맵을 나아가 경로를 그리는 모습이다. reward는 가장 크게는 도착 보상과 충돌 보상을 가지며, yaw축이 회전한 정도, goal box와 가까워지는 정도 생존한 시간 등을 종합적으로 고려해 총 보상값을 적용했으며 상단 그래프가 reward에 대한 값을 나타낸다.
 또한 아래의 그래프는 DQN모델의 비용함수 값의 파라미터 중 하나이며, state와 action의 조합값인 Q-value이다.
 학습으로 얻어진 경로는 아래와 같다.
@@ -99,6 +101,7 @@ Fig. 9 trajectory graph obtained from DQN learning
 waypoint를 따라 움직일 수 있음을 간단히 보여주기 위해 정사각형 트랙을 움직이며 그 trajectory를 그래프로도 보여줌을 확인하는 영상이다.
 
 https://user-images.githubusercontent.com/104184349/204847998-daacea51-76d0-4070-9bc8-a333add9785d.mp4
+
 Fig. 10 The actual Turtlebot drawing a square field
 
 정사각형 트랙을 따라 움직이며 경로를 생성할 때, 레이저에서 스캔된 값들이 앞서 언급된 조건과 같은 경우 터틀봇이 정지하는 것을 확인한 영상이다.
