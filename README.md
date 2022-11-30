@@ -28,6 +28,8 @@ Fig. 1 A generic closed-loop process-control system with PID controller.
 
 아래는 PID제어이론을 기반으로 속도제어를 해 지나야 할 경로들에 대한 설계이다. 
 
+![축구장설계](https://user-images.githubusercontent.com/104184349/204840821-ae1564a1-c480-4f5d-b124-ed839e349898.png)
+
 Fig. 2 Design for football field
 PID제어에서 축구장, 야구장, 오징어 게임장 총 3개 종류의 field 설계 중 축구장만을 대표 예시로 들겠다.
 
@@ -51,15 +53,15 @@ Collision 시 –1500, 목표 도달 시 3000,
 좌우가 2m by 2m인 정사각형이고 총 4.5m by 2.5m인 직사각형 코트의 경로를 그리며 학습하기 위해서 아래와 같이 벽을 설계하였다.
  -학습할 map
 
+![화면 캡처 2022-11-30 210744](https://user-images.githubusercontent.com/104184349/204840981-1982de27-25b4-4897-a921-e0047ce15d85.png)
+
 Fig. 3 Maps used for dqn learning
 
 # 5. Hardware 터틀봇3 모델=burger 구현
 터틀봇의 SBC인 라즈베리 파이 PC를 고정 IP할당과 Remote PC를 연결해야 한다. 그 과정으로는 PC setup과 SBC setup을 마친 후 두 PC ubuntu에 ROS 의존성 패키지를 설치한 이후 remote PC에 필요한 ros 패키지들을 모두 설치하여야 한다. 이후 remote PC의 Ubuntu와 터틀봇의 라즈베리파이를 원격 연결할 수 있다. 다음으로 remote PC에서 turtlebot3_bringup 패키지를 실행할 수 있는데 이 패키지에 의해서 실제 터틀봇의 odometry와 battery state, IMU 등등의 터틀봇의 data값들을 가져올 수 있다. 이후에는 gazebo상에서 시뮬레이션 하던 것과 같이 소스코드와 패키지를 실행할 수 있었다.
 실제 구현한 사진은 아래와 같고, simulation에서 움직이는 것과 같이 teleop 패키지를 이용해 키보드로 터틀봇을 간단히 조작할 수 있었다.
 
-
-
-
+![KakaoTalk_20221130_235946380](https://user-images.githubusercontent.com/104184349/204841098-279a7a8b-4ef8-4e3e-9fe3-67cdce72746a.jpg)
  Fig. 4 Connecting the actual Turtlebot 3 and the auxiliary battery
 
 
