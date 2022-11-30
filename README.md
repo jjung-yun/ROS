@@ -19,6 +19,7 @@ IMU센서 : Gyroscope 3 Axis, Accelerometer 3 Axis
 # 3. PID제어 구현
 PID제어는 Proportional Integral Derivative control의 약자로, 얻고자 하는 출력 값 (controlled variable)이 명령을 받아 실제 System을 변화시키는 명령 값 (commanded variable)과 얼마나 차이가 나는지 (error term)를 계산해 0으로 수렴할 수 있게 해주는 것을 의미한다.
 
+![pid](https://user-images.githubusercontent.com/104184349/204840458-fef330d6-dae7-4bde-b161-b13c38145957.png)
 Fig. 1 A generic closed-loop process-control system with PID controller.
 
 
