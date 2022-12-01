@@ -5,6 +5,17 @@
 > 2018100670 김정윤
 > 2018100694 방지호
 
+
+# 0. 시현영상
+
+https://youtu.be/1fdHOBS73G4
+
+00:04 ~ 04:43 gazebo 시뮬레이션 환경에서 PID제어로 축구장 그리기
+
+04:44 ~ 08:29 gazebo 시뮬레이션 환경에서 DQN 학습모델이 학습하는 모습
+
+08:30 ~ 11:24 실제 turtlebot3 모델=burger가 사각형 트랙을 그리는 모습과 장애물 회피영상
+
 # 1. 실행환경 
 - Ubuntu 18.04 LTS버전, ROS-melodic, python2.7.17, tensorflow 2.1.0, numpy 1.16.4, keras 2.3.1, Anaconda 3
 - Ubuntu 22.04, ROS2-humble, python 3.9, tensorflow 2.1.0, numpy 1.16.6, keras 2.3.1, Gazebo9
@@ -22,7 +33,7 @@ IMU센서 : Gyroscope 3 Axis, Accelerometer 3 Axis
 
 ![fig1](https://user-images.githubusercontent.com/104184349/204995168-e52a79d6-6049-4ab2-9c2c-3c58fecd04ed.png)
 
-Fig. 1 Conceptual schematic for waypoint implementation.
+**Fig. 1** Conceptual schematic for waypoint implementation.
 
 
   앞서 언급하였듯이 Odometry를 통해 터틀봇3의 x, y, θ 값을 받아들일 수 있다. 이때 각각의 값을 self.x, self.y, self.θ라고 하자. 도착 지점의 좌표는 명령을 통해 넣어주는 값으로 x, y으로 정의하였다.
@@ -40,7 +51,7 @@ PID제어는 Proportional Integral Derivative control의 약자로, 얻고자 �
 
 ![pid](https://user-images.githubusercontent.com/104184349/204840458-fef330d6-dae7-4bde-b161-b13c38145957.png)
 
-Fig. 2 A generic closed-loop process-control system with PID controller.
+**Fig. 2** A generic closed-loop process-control system with PID controller.
 
 
 위 그림에서 알 수 있듯, PID제어는 P I D 3종류의 제어를 받는다. 따라서 각 제어에 적절한 이득 값 (gain)을 주어 오차항을 줄일 수 있는데 이 적절한 이득 값을 계산하거나 구하는 과정을 튜닝 (tuning)이라고 한다. PID제어는 Closed loop에서 오차를 이용하여 조절하는 구조로 그 구조가 간단하고, 파라미터 조정을 비교적 쉽게 할 수 있으며, 제어 성능 또한 우수하여 가장 많이 사용된다. 하지만 각각의 Gain을 찾는 과정이 번거롭고 어렵다. 아래는 각 Gain값이 PID제어에서 어떤 역할을 하는지에 대한 설명이다.
@@ -49,7 +60,7 @@ Fig. 2 A generic closed-loop process-control system with PID controller.
 
 ![축구장설계](https://user-images.githubusercontent.com/104184349/204840821-ae1564a1-c480-4f5d-b124-ed839e349898.png)
 
-Fig. 3 Design for football field
+**Fig. 3** Design for football field
 
 PID제어에서 축구장, 야구장, 오징어 게임장 총 3개 종류의 field 설계 중 축구장만을 대표 예시로 들겠다.
 
@@ -71,11 +82,12 @@ Collision 시 –1500, 목표 도달 시 3000,
  
 위 맵을 기반으로 DQN학습으로 간단한 테니스 코트장을 구현하고자 한다.
 좌우가 2m by 2m인 정사각형이고 총 4.5m by 2.5m인 직사각형 코트의 경로를 그리며 학습하기 위해서 아래와 같이 벽을 설계하였다.
+
  -학습할 map
 
 ![가제보맵](https://user-images.githubusercontent.com/104184349/204853755-cdadca60-55d8-4ddf-923c-1e90347ba971.png)
 
-Fig. 4 Maps used for dqn learning
+**Fig. 4** Maps used for dqn learning
 
 # 6. Hardware 터틀봇3 모델=burger 구현
 터틀봇의 SBC인 라즈베리 파이 PC를 고정 IP할당과 Remote PC를 연결해야 한다. 그 과정으로는 PC setup과 SBC setup을 마친 후 두 PC ubuntu에 ROS 의존성 패키지를 설치한 이후 remote PC에 필요한 ros 패키지들을 모두 설치하여야 한다. 이후 remote PC의 Ubuntu와 터틀봇의 라즈베리파이를 원격 연결할 수 있다. 다음으로 remote PC에서 turtlebot3_bringup 패키지를 실행할 수 있는데 이 패키지에 의해서 실제 터틀봇의 odometry와 battery state, IMU 등등의 터틀봇의 data값들을 가져올 수 있다. 이후에는 gazebo상에서 시뮬레이션 하던 것과 같이 소스코드와 패키지를 실행할 수 있었다.
@@ -83,7 +95,7 @@ Fig. 4 Maps used for dqn learning
 
 ![더작음](https://user-images.githubusercontent.com/104184349/204842767-e07c0bb4-f934-471d-9bb3-4871a13502b8.jpg)
 
- Fig. 5 Connecting the actual Turtlebot 3 and the auxiliary battery
+** Fig. 5** Connecting the actual Turtlebot 3 and the auxiliary battery
 
 
 # 6. 결과
@@ -92,21 +104,21 @@ ROS-melodic에서 gazebo로 구현하여 뽑은 trajectory는 아래와 같다.
 
 ![축구장 (1)](https://user-images.githubusercontent.com/104184349/204845108-ff631cb5-cd3a-494c-97d5-e1c666c05c74.png)
 
-Fig. 6 A soccer field implemented by the trajectory of turtlebot3
+**Fig. 6** A soccer field implemented by the trajectory of turtlebot3
 
 ![오징어 (1)](https://user-images.githubusercontent.com/104184349/204847346-6220dc9e-6671-4645-ba6f-718b92abc160.png)
 
-Fig. 7 A baseballfield implemented by the trajectory of turtlebot3
+**Fig. 7** A baseballfield implemented by the trajectory of turtlebot3
 
 ![야구장 (1)](https://user-images.githubusercontent.com/104184349/204847483-2914155e-a39c-4b10-9a4f-f8ef44fa06cb.png)
 
-Fig. 8 A squid game field implemented by the trajectory of turtlebot3
+**Fig. 8** A squid game field implemented by the trajectory of turtlebot3
 
 (2) DQN학습을 통한 Field painting 
 
 ![화면 캡처 2022-11-30 213337](https://user-images.githubusercontent.com/104184349/204847565-1efba6ff-1955-4788-957d-a50b27b59976.png)
 
-Fig. 9 goal reward 3000 collision reward –1500 
+**Fig. 9** goal reward 3000 collision reward –1500 
 
 gazebo 시뮬레이션 환경에서 터틀봇이 학습하며 맵을 나아가 경로를 그리는 모습이다. reward는 가장 크게는 도착 보상과 충돌 보상을 가지며, yaw축이 회전한 정도, goal box와 가까워지는 정도 생존한 시간 등을 종합적으로 고려해 총 보상값을 적용했으며 상단 그래프가 reward에 대한 값을 나타낸다.
 또한 아래의 그래프는 DQN모델의 비용함수 값의 파라미터 중 하나이며, state와 action의 조합값인 Q-value이다.
@@ -114,12 +126,12 @@ gazebo 시뮬레이션 환경에서 터틀봇이 학습하며 맵을 나아가 �
 
 ![fig9](https://user-images.githubusercontent.com/104184349/204847629-f9666fb8-4388-420e-9c84-88632f8b03f0.png)
 
-Fig. 10 trajectory graph obtained from DQN learning
+**Fig. 10** trajectory graph obtained from DQN learning
 
 
 ![image](https://user-images.githubusercontent.com/104184349/204995456-cc6f2be4-e455-4926-bd19-1636086fe12f.png)
 
-Fig. 11 Turtlebot trying to reach the target box through learning
+**Fig. 11** Turtlebot trying to reach the target box through learning
 
 https://user-images.githubusercontent.com/104184349/204995619-c6884f3d-05c7-46ef-9fa4-c029053a1f80.mp4
 
@@ -129,7 +141,7 @@ https://user-images.githubusercontent.com/104184349/204995619-c6884f3d-05c7-46ef
 
 ![image](https://user-images.githubusercontent.com/104184349/204995491-2470564d-bffe-47fe-8041-58d7cc095b1b.png)
 
-Fig. 12 Final trajectory of tennis court created by DQN learning
+**Fig. 12** Final trajectory of tennis court created by DQN learning
 
 위 시뮬레이션 사진에서 (-0.5, 1.0) 점과 (-0.5, 1.5) 목표점을 한번에 통과하여 그 경로가 이산적으로 나타났다. 경로가 연속적이지 못한 한계가 있었지만, 원하는 목표점을 학습을 통해 모두 경유할 수 있었던 점에 큰 의의가 있었다.
 위는 DQN학습을 통한 field painting으로 대략적인 테니스 코트를 trajectory를 통해 그려본 모습이다. 40000번이 넘는 episode를 통해 목표점에 도달한 경로들만 골라 뽑은 그래프이다. 학습하는 모델 특성상 굉장히 많은 시도를 해야하는데 실제 터틀봇에서 여러번의 시도에는 제한이 있어 시뮬레이션으로만 구현하였다.
@@ -137,12 +149,12 @@ Fig. 12 Final trajectory of tennis court created by DQN learning
 (3) 실제 터틀봇 구현
 waypoint를 따라 움직일 수 있음을 간단히 보여주기 위해 정사각형 트랙을 움직이며 그 trajectory를 그래프로도 보여줌을 확인하는 영상이다.
 
-https://user-images.githubusercontent.com/104184349/204847998-daacea51-76d0-4070-9bc8-a333add9785d.mp4
+https://user-images.githubusercontent.com/104184349/204998809-32511aed-ed34-4f8a-af70-0e792af17b01.mp4
 
-Fig. 13 The actual Turtlebot drawing a square field
+**Fig. 13** The actual Turtlebot drawing a square field
 
 정사각형 트랙을 따라 움직이며 경로를 생성할 때, 레이저에서 스캔된 값들이 앞서 언급된 조건과 같은 경우 터틀봇이 정지하는 것을 확인한 영상이다.
 
-https://user-images.githubusercontent.com/104184349/204852106-72a37eaf-3db5-4cf2-acb0-fec11baeecd0.mp4
+https://user-images.githubusercontent.com/104184349/204998984-740a9857-6a62-4f91-86be-d3d8616ac77d.mp4
 
-Fig. 14 Turtlebot moving and stopping along the path
+**Fig. 14** Turtlebot moving and stopping along the path
