@@ -71,6 +71,7 @@ Collision 시 –1500, 목표 도달 시 3000,
  
 위 맵을 기반으로 DQN학습으로 간단한 테니스 코트장을 구현하고자 한다.
 좌우가 2m by 2m인 정사각형이고 총 4.5m by 2.5m인 직사각형 코트의 경로를 그리며 학습하기 위해서 아래와 같이 벽을 설계하였다.
+
  -학습할 map
 
 ![가제보맵](https://user-images.githubusercontent.com/104184349/204853755-cdadca60-55d8-4ddf-923c-1e90347ba971.png)
@@ -137,12 +138,12 @@ https://user-images.githubusercontent.com/104184349/204995619-c6884f3d-05c7-46ef
 (3) 실제 터틀봇 구현
 waypoint를 따라 움직일 수 있음을 간단히 보여주기 위해 정사각형 트랙을 움직이며 그 trajectory를 그래프로도 보여줌을 확인하는 영상이다.
 
-https://user-images.githubusercontent.com/104184349/204847998-daacea51-76d0-4070-9bc8-a333add9785d.mp4
+https://user-images.githubusercontent.com/104184349/204996430-f1d403d0-6f4a-4dfd-9e27-9e466b303bd1.mp4
 
 **Fig. 13** The actual Turtlebot drawing a square field
 
 정사각형 트랙을 따라 움직이며 경로를 생성할 때, 레이저에서 스캔된 값들이 앞서 언급된 조건과 같은 경우 터틀봇이 정지하는 것을 확인한 영상이다.
 
-https://user-images.githubusercontent.com/104184349/204852106-72a37eaf-3db5-4cf2-acb0-fec11baeecd0.mp4
+
 
 **Fig. 14** Turtlebot moving and stopping along the path
