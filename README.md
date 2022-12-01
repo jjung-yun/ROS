@@ -10,9 +10,9 @@
 
 https://youtu.be/1fdHOBS73G4
 
-00:04~04:43 gazebo 시뮬레이션 환경에서 PID제어로 축구장 그리기
-04:44~08:29 gazebo 시뮬레이션 환경에서 DQN 학습모델이 학습하는 모습
-08:30~11:24 실제 turtlebot3 모델=burger가 사각형 트랙을 그리는 모습과 장애물 회피영상
+00:04 ~ 04:43 gazebo 시뮬레이션 환경에서 PID제어로 축구장 그리기
+04:44 ~ 08:29 gazebo 시뮬레이션 환경에서 DQN 학습모델이 학습하는 모습
+08:30 ~ 11:24 실제 turtlebot3 모델=burger가 사각형 트랙을 그리는 모습과 장애물 회피영상
 
 # 1. 실행환경 
 - Ubuntu 18.04 LTS버전, ROS-melodic, python2.7.17, tensorflow 2.1.0, numpy 1.16.4, keras 2.3.1, Anaconda 3
