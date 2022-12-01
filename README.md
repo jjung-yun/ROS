@@ -138,7 +138,7 @@ https://user-images.githubusercontent.com/104184349/204995619-c6884f3d-05c7-46ef
 (3) 실제 터틀봇 구현
 waypoint를 따라 움직일 수 있음을 간단히 보여주기 위해 정사각형 트랙을 움직이며 그 trajectory를 그래프로도 보여줌을 확인하는 영상이다.
 
-[https://user-images.githubusercontent.com/104184349/204996430-f1d403d0-6f4a-4dfd-9e27-9e466b303bd1.mp4](https://user-images.githubusercontent.com/104184349/204997008-ca30e33f-ed7e-4ff5-a5a0-2f2926288ee5.mp4)
+https://user-images.githubusercontent.com/104184349/204998809-32511aed-ed34-4f8a-af70-0e792af17b01.mp4
 
 **Fig. 13** The actual Turtlebot drawing a square field
 
