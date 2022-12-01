@@ -144,6 +144,6 @@ waypoint를 따라 움직일 수 있음을 간단히 보여주기 위해 정사�
 
 정사각형 트랙을 따라 움직이며 경로를 생성할 때, 레이저에서 스캔된 값들이 앞서 언급된 조건과 같은 경우 터틀봇이 정지하는 것을 확인한 영상이다.
 
-
+https://user-images.githubusercontent.com/104184349/204997252-0a2369f6-6393-4088-864a-0fbb434f0a39.mp4
 
 **Fig. 14** Turtlebot moving and stopping along the path
