@@ -121,6 +121,9 @@ Fig. 10 trajectory graph obtained from DQN learning
 
 Fig. 11 Turtlebot trying to reach the target box through learning
 
+https://user-images.githubusercontent.com/104184349/204995619-c6884f3d-05c7-46ef-9fa4-c029053a1f80.mp4
+
+
 이후 굉장히 많은 episode를 통해 학습한 터틀봇이 마지막 목표상자를 타겟으로 접근하는 모습이다. 학습하면서 생긴 경로들은 1번 목표점부터 총 26번 목표점까지 모두 누적하여 아래의 그래프와 같이 나타내었다.
 
 
