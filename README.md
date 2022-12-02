@@ -5,6 +5,17 @@
 > 2018100670 김정윤
 > 2018100694 방지호
 
+
+# 0. 시현영상
+
+https://youtu.be/1fdHOBS73G4
+
+00:04 ~ 04:43 gazebo 시뮬레이션 환경에서 PID제어로 축구장 그리기
+
+04:44 ~ 08:29 gazebo 시뮬레이션 환경에서 DQN 학습모델이 학습하는 모습
+
+08:30 ~ 11:24 실제 turtlebot3 모델=burger가 사각형 트랙을 그리는 모습과 장애물 회피영상
+
 # 1. 실행환경 
 - Ubuntu 18.04 LTS버전, ROS-melodic, python2.7.17, tensorflow 2.1.0, numpy 1.16.4, keras 2.3.1, Anaconda 3
 - Ubuntu 22.04, ROS2-humble, python 3.9, tensorflow 2.1.0, numpy 1.16.6, keras 2.3.1, Gazebo9
@@ -138,12 +149,12 @@ https://user-images.githubusercontent.com/104184349/204995619-c6884f3d-05c7-46ef
 (3) 실제 터틀봇 구현
 waypoint를 따라 움직일 수 있음을 간단히 보여주기 위해 정사각형 트랙을 움직이며 그 trajectory를 그래프로도 보여줌을 확인하는 영상이다.
 
-[https://user-images.githubusercontent.com/104184349/204996430-f1d403d0-6f4a-4dfd-9e27-9e466b303bd1.mp4](https://user-images.githubusercontent.com/104184349/204997008-ca30e33f-ed7e-4ff5-a5a0-2f2926288ee5.mp4)
+https://user-images.githubusercontent.com/104184349/204998809-32511aed-ed34-4f8a-af70-0e792af17b01.mp4
 
 **Fig. 13** The actual Turtlebot drawing a square field
 
 정사각형 트랙을 따라 움직이며 경로를 생성할 때, 레이저에서 스캔된 값들이 앞서 언급된 조건과 같은 경우 터틀봇이 정지하는 것을 확인한 영상이다.
 
-
+https://user-images.githubusercontent.com/104184349/204998984-740a9857-6a62-4f91-86be-d3d8616ac77d.mp4
 
 **Fig. 14** Turtlebot moving and stopping along the path
